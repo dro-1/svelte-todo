@@ -3,7 +3,6 @@
   import { TodoStore } from "./../stores";
   let activeTab = "incomplete";
 
-  $: console.log($TodoStore);
   $: incompleteTodos = $TodoStore
     .filter((todo) => !todo.completed)
     .sort((todoA, todoB) => todoB.priority - todoA.priority);
